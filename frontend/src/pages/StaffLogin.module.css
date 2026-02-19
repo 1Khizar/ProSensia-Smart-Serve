@@ -1,0 +1,113 @@
+/* ─── Staff Login ─── */
+
+.page {
+  min-height: 70dvh;
+  display: grid;
+  place-items: center;
+  animation: fadeIn .35s ease;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: 28px 22px;
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.select,
+.input {
+  width: 100%;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  background: var(--glass);
+  color: var(--text);
+  padding: 11px 14px;
+  transition: border-color .2s;
+}
+
+.select:focus,
+.input:focus {
+  outline: none;
+  border-color: var(--accent-glow);
+}
+
+.error {
+  color: var(--danger);
+  font-size: 0.82rem;
+  padding: 8px 12px;
+  background: var(--danger-subtle);
+  border-radius: var(--radius-xs);
+  border: 1px solid rgba(239,68,68,.2);
+}
+
+.button {
+  border-radius: var(--radius-sm);
+  padding: 13px 14px;
+  border: none;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+  color: #000;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all .25s var(--ease-out);
+  box-shadow: var(--shadow-accent);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 28px rgba(16,185,129,.35);
+}
+
+.button:active {
+  transform: translateY(0) scale(.98);
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
